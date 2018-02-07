@@ -1,0 +1,13 @@
+
+<div id="hit">
+    <ol>
+        <li ng-repeat="item in found" class="dish">
+            <span id="name">[{{ item.short_name }}] {{ item.name }}</span><br />
+            <b>Description:</b> {{ item.description }}<br />
+            <button ng-click="onRemove({index: $index});">Don't want this one!</button>
+        </li>
+    </ol>
+    <div class="empty">
+        {{ empty }}
+    </div>
+</div>
