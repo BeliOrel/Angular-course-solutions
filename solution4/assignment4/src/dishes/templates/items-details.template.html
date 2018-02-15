@@ -1,0 +1,10 @@
+<ul id="items-list">
+    <li ng-repeat="item in $ctrl.items">
+        <span class="item-name">{{ item.name }}</span>
+        <span ng-if="item.description" class="item-description"><br />Description:</span> {{ item.description }}<br />
+        <span class="price-line">
+            <span ng-if="item.price_small" class="price"><b>Small:</b> {{ item.price_small | currency }}</span>
+            <span ng-if="item.price_large" class="price"><b>Large:</b> {{ item.price_large | currency }}</span>
+        </span>
+    </li>
+</ul>

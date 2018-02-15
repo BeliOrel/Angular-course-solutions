@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Convergence" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurant Blue Feather</title>
+</head>
+<body>
+    <ui-view></ui-view>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/dishes/data.module.js"></script>
+    <script src="src/dishes/menuapp.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+
+    <!-- Artifacts -->
+    <script src="src/dishes/menudata.service.js"></script>
+    <script src="src/dishes/categories.component.js"></script>
+    <script src="src/dishes/categories.controller.js"></script>
+    <script src="src/dishes/items.component.js"></script>
+    <script src="src/dishes/items.controller.js"></script>
+
+</body>
+</html>

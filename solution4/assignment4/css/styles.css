@@ -1,0 +1,138 @@
+h1 {
+	font-family: Convergence;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 52px;
+    color: #cdb68a;
+	text-align: center;
+	padding: 30px 40px;
+}
+
+h2 {
+	font-family: Convergence;
+	font-size: 30px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 40px;
+    color: #26467b;
+	padding: 5px 30px;
+}
+
+h2:after {
+    content: ' ';
+    display: block;
+    border: 2px solid #d0d0d0;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+img {
+	display: block;
+	width: 40%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+	padding: 0 50px;
+}
+
+a {
+	text-decoration: none;
+	color: #5b93a8;
+}
+
+#main-text{
+	text-align: center;
+}
+
+#main-text a {
+	text-align: center;
+    padding: 10px 20px;
+    display: inline-block;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#main-text a:hover {
+	background-color: #5b93a8;
+    color: white;
+}
+
+#blue {
+    color: #054d7a;
+}
+
+.item-name {
+    font-style: italic;
+    font-weight: bolder;
+	font-size: 18px;
+	color: #cdb68a;
+}
+
+.item-description {
+	font-weight: 700;
+}
+
+.category-name {
+	font-weight: 500;
+	cursor: pointer;
+}
+
+#categories-list {
+	width: 40%;
+}
+
+#categories-list li[ui-sref]:hover {
+	background-color: #26467b;
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#items-list li {
+	padding-bottom: 15px;
+}
+
+.link {
+    font-family: "Varela Round";
+	font-size: 16px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 30px;
+    color: #5b93a8;
+	padding: 0 30px;
+}
+
+.link a{
+	padding: 0 5px;
+}
+
+.link a:hover {
+	background-color: #cdb68a;
+	color: white;
+}
+
+.price-line{
+	font-size: 13px;
+	color: #969696;
+	font-style: italic;
+	display: inline-block;
+}
+
+.price {
+	float: left;
+	display: inline-block;
+	width: 150px;
+}
