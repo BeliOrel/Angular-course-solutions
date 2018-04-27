@@ -1,0 +1,45 @@
+<div class="container content">
+  <h2 class="text-center">Sign Up</h2>
+
+  <div ng-if="signUpCtrl.submitted" class="text-msg">Your information has been saved.</div>
+  <div ng-if="!signUpCtrl.submitted">
+      <form name="signupForm" id="signup" novalidate>
+          <div class="form-group">
+              <label for="firstName">First Name: </label>
+              <input type="text" class="form-control" name="firstName" placeholder="Enter your first name" required ng-minlength='2' ng-model="signUpCtrl.infoData.firstName">
+              <span ng-if="signupForm.firstName.$invalid && signupForm.firstName.$touched" class="error">
+                  First Name Required!
+              </span>
+          </div>
+          <div class="form-group">
+                <label for="lastName">Last Name: </label>
+                <input type="text" class="form-control" name="lastName" placeholder="Enter your last name" required ng-model="signUpCtrl.infoData.lastName" ng-minlength='2'>
+                <span ng-if="signupForm.lastName.$invalid && signupForm.lastName.$touched" class="error">
+                    Last Name Required!
+                </span>
+          </div>
+          <div class="form-group">
+              <label for="email">Email Address: </label>
+              <input type="email" class="form-control" name="email" placeholder="Enter your email address" required ng-model="signUpCtrl.infoData.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/">
+              <span ng-if="signupForm.email.$invalid && signupForm.email.$touched" class="error">
+                    Must be a valid email address: name@domain format!
+              </span>
+          </div>
+          <div class="form-group">
+                <label for="phone">Phone Number: </label>
+                <input type="text" name="phone" class="form-control" ng-model="signUpCtrl.infoData.phone" ng-minlength="9" ng-pattern="/(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/" placeholder="Enter your phone number (Format: ###-###-####)">
+                <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched" class="error">
+                    Phone number must be in a format ###-###-####!
+                </span>
+          </div>
+          <div class="form-group">
+                <label for="favourite-dish">Your Favourite Dish: </label>: </label>
+                <input type="text" name="favourite-dish" class="form-control" ng-model="signUpCtrl.infoData.favouriteDish" ng-blur="signUpCtrl.validateFavourite()" required placeholder="Enter the menu number of your favourite dish">
+                <span ng-if="signUpCtrl.invalidFavourite" class="error">
+                    No such menu number exists!
+                </span>
+          </div>
+          <button type="submit" class="btn btn-default" ng-disabled="signupForm.$invalid" ng-click="signUpCtrl.submit()">Submit</button>
+      </form>
+  </div>
+</div>
